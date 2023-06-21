@@ -4,7 +4,7 @@ import Homepage from "./Components/Homepage";
 import SiteHeader from "./Components/SiteHeader";
 import SiteSider from "./Components/SiteSider";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Footer, Sider } = Layout;
 
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -37,10 +37,9 @@ const App = () => {
             zIndex: 1,
             width: "100%",
             display: "flex",
-            alignItems: "center",
             paddingLeft: "15px",
             justifyContent: "space-between",
-            backgroundColor: "black",
+            backgroundColor: "#0e1217",
             borderBottom: "solid 1px grey"
           }}
         >
@@ -50,14 +49,12 @@ const App = () => {
           <Sider
             collapsed={collapsed}
             onCollapse={handleCollapse}
-            style={{backgroundColor: "black", borderRight: "solid 1px grey"}}
+            style={{backgroundColor: "#0e1217", borderRight: "solid 1px grey"}}
           >
             <SiteSider collapsed={collapsed} handleCollapse={handleCollapse} />
           </Sider>
           <Layout>
-            <Content style={{ margin: "0 16px" }}>
               <Homepage />
-            </Content>
             <Footer>Footer</Footer>
           </Layout>
         </Layout>

@@ -3,7 +3,7 @@ import { Card, Row, Col, Button, Divider } from "antd";
 
 const Homepage = () => {
   return (
-    <Content style={{ padding: "24px" }}>
+    <Content style={{ padding: "24px", backgroundColor: "#0e1217" }}>
       <Card title="Welcome to My Website">
         <p>This is the homepage of my website.</p>
         <p>Feel free to explore and discover more about us.</p>

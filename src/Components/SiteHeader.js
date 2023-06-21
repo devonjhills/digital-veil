@@ -1,5 +1,7 @@
-import { Button, Space, Switch, Typography } from "antd";
-import { BulbOutlined, BulbFilled } from "@ant-design/icons";
+import { Button, Space, Typography } from "antd";
+import { BulbFilled } from "@ant-design/icons";
+import { BsMoonFill, BsSunFill } from 'react-icons/bs';
+import { ReactComponent as MoonIcon } from "../Assets/Images/moon.svg";
 import React from "react";
 
 const { Text } = Typography;
@@ -17,19 +19,19 @@ const SiteHeader = ({ darkMode, handleModeToggle }) => {
           Digital Veil
         </Text>
       </div>
-      <Space>
-        <Switch
-          checked={darkMode}
-          checkedChildren={<BulbOutlined />}
-          unCheckedChildren={<BulbFilled />}
-          onChange={handleModeToggle}
+      <div style={{ display: "flex", alignItems: "center" }}>
+      
+        <Button
           size="large"
-        />
-        <Button style={{marginLeft: "10px"}}>Log in</Button>
-        <Button type="primary">
-          Sign up
+          type="default"
+          
+          onClick={handleModeToggle}
+        >
+          {darkMode ? <BsSunFill color="orange" size={24} /> : <BsMoonFill color="black" size={24}/>}
         </Button>
-      </Space>
+        <Button size="large" >Log in</Button>
+        <Button size="large" type="primary">Sign up</Button>
+      </div>
     </>
   );
 };
