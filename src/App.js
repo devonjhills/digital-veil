@@ -25,7 +25,7 @@ const App = () => {
       theme={{
         algorithm: darkMode ? darkAlgorithm : defaultAlgorithm,
         token: {
-          colorPrimary: darkMode ? "#7F00FF" : "green",
+          colorPrimary: darkMode ? "#3c8618" : "#162312",
         },
       }}
     >
